@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Martin Dřímal - servis-kolobezek.cz">
+        <title>Předávací protokol v2-1</title>
+
+        <style>
+            .dbg {
+                border: 1px dashed black;
+            }
+
+            .container {
+                max-width: 750px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .nadpisy {
+                font-size: 1.1em;
+            }
+
+            .nadpis {
+                font-weight: bold;
+                text-align: center;
+                letter-spacing: 0.8em;
+                padding-bottom: 5px;
+            }
+
+            .podnadpis {
+                letter-spacing: 0.5em;
+                text-align: center;
+                margin-bottom: 32px;
+            }
+
+            .formular {
+                width: 725px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .ramecek {
+                border: 2px solid black;
+                margin: 8px;
+                min-height: 42px;
+            }
+
+            .ramecek > .popisek {
+                font-size: 0.825em;
+                font-weight: bold;
+                padding-left: 4px!important;
+                margin-bottom: 8px!important;
+            }
+
+            .ramecek > p {
+                margin-left: 10px;
+                line-height: 1.25em;
+            }
+
+            .predavajici, .prebirajici {
+                width: 45%;
+                min-height: 138px;
+            }
+
+            .predavajici {
+                float: right;
+            }
+
+            .prebirajici {
+                float: left;
+            }
+
+            .predavajici > p {
+                line-height: 1.85em;
+            }
+
+            .prebirajici > #kolobezka {
+                float: left;
+                margin: 16px;
+                width: 99px;
+            }
+
+            .zavady {
+                min-height: 333px;
+                margin-top: 16px;
+            }
+
+            .sluzby {
+                float: left;
+                width: 55%;
+                min-height: 42px;
+                margin-top: 12px;
+            }
+
+            .sluzby > p {
+                line-height: 1.5em;
+            }
+
+            .sluzby > label {
+                padding-left: 10px;
+            }
+
+            .terminy {
+                float: right;
+                width: 39%;
+                margin-top: 12px;
+                line-height: 1.8em;
+            }
+
+            .terminy > div {
+                padding-left: 8px!important;
+            }
+
+            .terminy > .poznamka {
+                font-size: 0.77em;
+                color: darkslategrey;
+                padding: 8px;
+            }
+
+            .podpisy {
+                min-height: 105px!important;
+            }
+
+            .podpisy > #podpis-predavajici, #podpis-prebirajici {
+                width: 45%;
+                padding-top: 8px;
+                text-align: center;
+                text-decoration: underline;
+            }
+
+            .podpisy > #podpis-predavajici{
+                float: right;
+            }
+
+            .podpisy > #podpis-prebirajici{
+                float: left;
+            }
+
+            .podpisy > .info {
+                color: darkslategrey;
+                padding: 4px;
+            }
+
+            .predanozpet {
+                text-align: center;
+            }
+
+            .clearfix {
+                clear: both;
+            }
+
+            .space8 {
+                height: 8px!important;
+            }
+
+
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="nadpisy">
+                <div class="nadpis">
+                    PŘEDÁVACÍ PROTOKOL
+                </div>
+
+                <div class="podnadpis">
+                    Vrácení zařízení ze servisu
+                </div>
+            </div>
+
+            <div class="formular">
+
+                <div class="predavajici ramecek">
+                    <span class="popisek">Přebírající:</span><br>
+                    <p></p>
+                </div>
+
+                <div class="prebirajici ramecek">
+                    <span class="popisek">Předávající:</span><br>
+                    <img id="kolobezka" alt=" " src="marty_elko_bw_small.png" />
+                    <p>
+                        <b>servis-kolobezek.cz</b><br>
+                        Martin Dřímal, IČ: 09294716<br>
+                        info@servis-kolobezek.cz<br>
+                        tel. 797 810 595
+                    </p>
+                </div>
+
+                <br class="clearfix">
+
+                <div class="ramecek">
+                    <span class="popisek">Předmět předání:</span>
+                </div>
+
+                <div class="ramecek zavady">
+                    <span class="popisek">Záznam servisu:</span>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="ramecek predanozpet">
+                    <p>
+                        Zařízení bylo předáno ze servisu zpět zákazníkovi dne ................... oproti platbě ................. Kč v hotovosti.
+                    </p>
+                </div>
+
+
+                <div class="clearfix"></div>
+
+                <div class="ramecek podpisy">
+                    <div class="info">
+                        Tento předávací protokol slouží zároveň jako příjmový pokladní doklad a účtenka. Nejsem plátce DPH.
+                    </div>
+
+                    <div id="podpis-predavajici">Podpis předávajícího:</div>
+                    <div id="podpis-prebirajici">Podpis přebírajícího:</div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </body>
+
+</html>
